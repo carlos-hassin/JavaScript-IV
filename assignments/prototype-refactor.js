@@ -32,12 +32,10 @@ Prototype Refactor
 */
 
 class GameObject{
-  constructor(attributes, dimensions){
+  constructor(attributes){
     this.createdAt = attributes.createdAt,
     this.name = attributes.name,
-    this.length = dimensions.length,
-    this.width = dimensions.width,
-    this.height = dimensions.height,
+    this.dimensions = attributes.dimensions
   }
   destroy(){
     return `${this.name} was removed from the GameObject.`
@@ -54,10 +52,11 @@ class GameObject{
 class CharacterStats extends GameObject{
   constructor(attributes){
     super(attributes);
-    this.healthPoints = attributes.healthPoints,
+    this.healthPoints = attributes.healthPoints
   }
-    takeDamage(){
-      return `${this.name} took damage`;
+  takeDamage(){
+    return `${this.name} took damage.`;
+  }
 }
 
 /*
@@ -72,13 +71,13 @@ class CharacterStats extends GameObject{
 
 class Humanoid extends CharacterStats{
   constructor(attributes){
-  super(attributes);
-  this.team = attributes.team,
-  this.weapons = attributes.weapons,
-  this. language = attributes.language,
+    super(attributes);
+    this.team = attributes.team,
+    this.weapons = attributes.weapons,
+    this.language = attributes.language
   }
   greet(){
-    return `${this.name} offers a greeting in ${this.language}.`
+    return `${this.name} offers a greeting in ${this.language}.`;
   }
 }
  
