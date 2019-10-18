@@ -52,12 +52,13 @@ class ProjectManager extends Instructor {
     this.favInstructor = atters.favInstructor;
   }
   standup(name, channel){
-    return `${name} announces to ${channel}, @channel standy times!​​​​​`;
+    return `${name.name} announces to ${channel}, @channel standy times!​​​​​`;
   }
   debugsCode(debuger, student, subject){
     return `${debuger} debugs ${student.name}'s code on ${subject}.`;
   }
 }
+
 //-------------All Objects here--------------
 
 const william = new Person({
@@ -123,7 +124,7 @@ console.log(ryan.grade(william, "Build Week Project"));
 console.log(thomas.listsSubjects("Markup Organization", "LESS", "Objects"));
 console.log(brian.PRAssignment(brian, "Web Design"));
 console.log(thomas.sprintChallenge(thomas, "JQuery"));
-console.log(tommy.standup(tommy.name, "web25_tommy"));
+console.log(tommy.standup(tommy, "web25_tommy"));
 console.log(carol.debugsCode("Jason", thomas, "Databases"));
 
 
