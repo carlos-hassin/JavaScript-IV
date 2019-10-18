@@ -119,7 +119,7 @@ const carol = new ProjectManager({
 console.log(rena.speak());
 console.log(william.speak());
 console.log(brit.demo("JavascriptIV"));
-console.log(ryan.grade(william.name, "Build Week Project"));
+console.log(ryan.grade(william, "Build Week Project"));
 console.log(thomas.listsSubjects("Markup Organization", "LESS", "Objects"));
 console.log(brian.PRAssignment(brian, "Web Design"));
 console.log(thomas.sprintChallenge(thomas, "JQuery"));
